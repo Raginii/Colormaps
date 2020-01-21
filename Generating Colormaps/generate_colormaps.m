@@ -1,7 +1,7 @@
 % This script generates the images based on the data from
 % generate_datasets.m
 
-% Images Naming COnvention:
+% Images Naming Convention:
 % colormap(autumn/hot/vir)_darkArea(l/r: left/ right)_spatialArrangement(concentric/grid)_whereTheHotspotLies(light/dark)_replicationNum
 
 function generate_colormaps(dataset, dataset_grid, cmaps, leftright, darklight, scramble, flipVertical, output_folder)
@@ -34,8 +34,9 @@ function generate_colormaps(dataset, dataset_grid, cmaps, leftright, darklight, 
         k = k+1; % keeps track of dataset number
         Fp = dataset{i};
         fold_num = fold_num+1; version = version+1;
-        mkdir(output_folder, num2str(fold_num));
-        dir = strcat(output_folder,'/',num2str(fold_num),'/');
+        %mkdir(output_folder, num2str(fold_num));
+        %dir = strcat(output_folder,'/',num2str(fold_num),'/');
+        dir = strcat(output_folder,'/');
         if scramble == true
             Fp_sq = dataset_grid{i};
         end
